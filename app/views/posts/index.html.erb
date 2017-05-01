@@ -1,0 +1,16 @@
+<!-- Displays all posts -->
+
+<ul class="all_posts">
+<h2>Current Posts</h2>
+<% @latest_posts.each do |post| %>
+<br>
+<li id="author"> Author: <%= post.user_id %></a> </li>
+<br>
+<li id="title"> Title: <%= post.title %> </li>
+<br>
+<li id="content"> Content: <%= post.content %> </li>
+<br>
+<br>
+<% end %>
+
+</ul>

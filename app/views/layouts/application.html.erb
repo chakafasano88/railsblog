@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project1</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+      <div class="nav">
+        <a href="/" class="linkref" >Home</a>
+        <a href="/destinations" class="linkref">Destinations</a>
+        <a href="/posts" class="linkref">Posts</a>
+        <div>
+          <div id="top-banner">
+            <% if session[:user_id] %>
+              <%= link_to("Sign Out", session_path(session[:user_id]), method: :delete) %>
+              <a href="/posts/new">Make A Post!</a>
+              <%= link_to "My Profile", user_path(session[:user_id]) %></a>
+            <% else %>
+              <a href="/sessions/new" class="banner_link">Sign in</a>
+              <a href="/users/new" class="banner_link">Sign up</a>
+            <% end %>
+          </div>
+          <div id="flash-message">
+            <% if flash[:notice] %>
+            <%= flash[:notice] %>
+            <% end %>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="main_container">
+
+      </div>
+
+      <%= yield %>
+      <!-- <div class="mid_container"> -->
+
+
+
+
+
+  </body>
+</html>

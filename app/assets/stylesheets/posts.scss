@@ -1,0 +1,61 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*Sign In Form*/
+.all_posts {
+  position: relative;
+  max-width: 75%;
+  border: 2px solid orangered;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+  z-index: 11;
+  text-align: left;
+  bottom: 1000px;
+  text-decoration: none;
+  left: 11%;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+#author {
+  font-weight: 400;
+}
+
+form#new_post.new_post{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  z-index: 13;
+  border: 1px solid red;
+}
+
+.button {
+  position: relative;
+  top: 15%;
+  font-size: 30px;
+}
+
+input#post_title {
+  text-align: left;
+
+}
+
+textarea#post_content{
+  height: 100px;
+}

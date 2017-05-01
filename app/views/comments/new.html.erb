@@ -1,0 +1,12 @@
+<!-- Creates a new comment -->
+<%= form_for([@post, @post.comments.build]) do |form| %>
+  <%= form.label :username %>
+  <%= form.text_field :username %>
+  <%= form.label :content %>
+  <%= form.text_field :content %>
+  <br>
+  <br>
+  <div class="button">
+  <%= form.submit %>
+  </div>
+<% end %>
