@@ -22,7 +22,6 @@ end
 # Creates an unstored user
 def new
   @user = User.new
-
 end
 # Displays user info
 def show
@@ -51,15 +50,17 @@ end
 
    if @user.destroy
      flash[:notice] = "User was deleted"
+     session[:user_id] = nil
+     redirect_to "/"
+
    else
      flash[:alert] = "User could not be deleted"
    end
 
-   redirect_to "/"
   end
 end
 
-def current_user
-return unless session[:user_id]
-@current_user ||= User.find(session[:user_id])
-end
+# def current_user
+# return unless session[:user_id]
+# @current_user ||= User.find(session[:user_id])
+# end

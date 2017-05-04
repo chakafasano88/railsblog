@@ -16,6 +16,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
 
   end
   # Creates an unstored user
@@ -24,10 +25,23 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:user_id])
+    @post = Post.find(params[:id])
+    @comment = Comment.new
   end
 
   def update
+    @post = Post.find(params[:id])
+    @post.title = params[:post][:title]
+    @post.date = params[:post][:date]
+    @post.content = params[:post][:content]
+
+    if @user.save
+      flash[:notice] = "The user was updated"
+      redirect_to user_path(@user)
+    else
+      flash[:alert] = "The user was not updated"
+      redirect_to edit_user_path(@user)
+    end
 
   end
 # Deletes a post

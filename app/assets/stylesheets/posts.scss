@@ -29,20 +29,19 @@ ul {
 #author {
   font-weight: 400;
 }
-
+// Makes a new post
 form#new_post.new_post{
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  left: 50%;
-  top: 70%;
-  transform: translate(-50%, -50%);
-  background-color: white;
+  position: relative;
+  max-width: 30%;
+  border: 3px solid white;
+  background-color: #f4f4f4;
+  z-index: 11;
   text-align: center;
+  bottom: 1000px;
+  left: 35%;
   display: flex;
   flex-flow: column;
-  z-index: 13;
-  border: 1px solid red;
+
 }
 
 .button {
@@ -57,5 +56,23 @@ input#post_title {
 }
 
 textarea#post_content{
-  height: 100px;
+  height: 200px;
+  width: 375px;
+}
+// This is the large div for specific comment and post!
+.comments_container {
+  position: relative;
+  max-width: 75%;
+  border: 2px solid orangered;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+  z-index: 11;
+  text-align: left;
+  bottom: 1000px;
+  text-decoration: none;
+  left: 11%;
+}
+// This is the comments form!
+.comments_form {
+  text-align: center;
 }

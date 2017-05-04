@@ -24,9 +24,10 @@ body {
   height: 1000px;
   border: 1px solid white;
   background-color: #f4f4f4;
-  opacity: .9;
   padding: 30px;
-  z-index: 10;
+  border: 1px solid red;
+  z-index: 2;
+
 }
 
  /* This is the Nav Bar */
@@ -52,7 +53,6 @@ body {
    color: gray;
  }
 
-
  /* This is the Sign Up/Sign In Div*/
  #top-banner {
    float: right;
@@ -76,4 +76,14 @@ body {
 
  a:hover {
    color: gray;
+ }
+
+ /*This is the photo*/
+ .nav {
+   background-image: url(https://www.abercrombiekent.com/assets_global/media/images/brand_marketing/mastheads/lsgj/patagonia-the-last-wilderness.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   max-width: 100%;
+   z-index: 100;
  }

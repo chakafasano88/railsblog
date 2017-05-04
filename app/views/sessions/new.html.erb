@@ -2,9 +2,13 @@
 <div class="sign_in_form">
 <%= form_tag sessions_path %>
   <%= label_tag :username %>
-  <%= text_field_tag :username %>
-  <%= label_tag :password %>
-  <%= text_field_tag :password %>
 
+  <%= text_field_tag :username %>
+
+  <%= label_tag :password %>
+
+  <%= text_field_tag :password %>
+<div class="login_button">
   <%= submit_tag "Login"%>
+</div>
 </div>

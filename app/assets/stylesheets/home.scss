@@ -1,3 +1,15 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Contains main page image
+.main_container_image {
+  background-image: url(http://s3.amazonaws.com/iexplore_web/images/assets/000/006/234/original/Argentina_-_Mount_Fitz_Roy.jpg?1443182077);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  max-width: 96%;
+  height: 1000px;
+  padding: 30px;
+  z-index: 2;
+  bottom: 1061px;
+}

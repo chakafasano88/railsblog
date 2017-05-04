@@ -1,6 +1,6 @@
 <!-- This returns a form to create a new User  -->
-<div class="new_user_form">
-
+<div class="container">
+  <div class="new_user_form">
 <%= form_for @user do |form| %>
   <%= form.label :username %>
   <%= form.text_field :username %>
@@ -13,5 +13,5 @@
 
   <%= form.submit %>
 <% end %>
-
+  </div>
 </div>

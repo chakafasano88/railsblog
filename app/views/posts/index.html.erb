@@ -4,13 +4,15 @@
 <h2>Current Posts</h2>
 <% @latest_posts.each do |post| %>
 <br>
-<li id="author"> Author: <%= post.user_id %></a> </li>
+<% if (post.user_id) %>
+<li id="author"> Author: <%= User.find(post.user_id).username %></li>
+<% end %>
 <br>
 <li id="title"> Title: <%= post.title %> </li>
 <br>
 <li id="content"> Content: <%= post.content %> </li>
 <br>
-<br>
+<%= link_to "Comment", post_path(post)%>
+</br>
 <% end %>
-
 </ul>

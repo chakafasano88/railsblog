@@ -6,6 +6,7 @@
 <li id="title"> First Name: <%= @user.fname %> </li>
 <li id="content"> Last Name: <%= @user.lname %> </li>
 <%= link_to("Delete", user_path(@user), method: :delete)%>
+<%= link_to "Edit", edit_user_path(@user)%>
 </ul>
 
 <h2>User Posts:</h2>
@@ -13,6 +14,8 @@
 <% @posts.each do |post| %>
 <li id="title"> Title: <%= post.title %> </li>
 <li id="content"> Content: <%= post.content %> </li>
+<%= link_to("Delete", user_path(@user), method: :delete)%>
+<%= link_to "Edit", edit_user_path(@user)%>
 <% end %>
 </ul>
 </div>

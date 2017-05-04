@@ -39,3 +39,23 @@ input{
   margin-bottom: 10px;
 
 }
+.new_user_form {
+  position: inherit;
+  max-width: 30%;
+  z-index: 15;
+  text-align: center;
+  left: 35%;
+}
+
+.container {
+    position: relative;
+    max-width: 30%;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #f4f4f4;
+    z-index: 11;
+    text-align: left;
+    bottom: 1000px;
+    text-decoration: none;
+    left: 35%;
+  }
