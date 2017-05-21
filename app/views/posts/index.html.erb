@@ -1,18 +1,26 @@
 <!-- Displays all posts -->
 
 <ul class="all_posts">
-<h2>Current Posts</h2>
-<% @latest_posts.each do |post| %>
-<br>
-<% if (post.user_id) %>
-<li id="author"> Author: <%= User.find(post.user_id).username %></li>
-<% end %>
-<br>
-<li id="title"> Title: <%= post.title %> </li>
-<br>
-<li id="content"> Content: <%= post.content %> </li>
-<br>
-<%= link_to "Comment", post_path(post)%>
-</br>
-<% end %>
+  <h2>Current Posts</h2>
+  <% @latest_posts.each do |post| %>
+  <br>
+    <% if (post.user_id) %>
+  <br>
+    <li id="author"> Author: <%= User.find(post.user_id).username %></li>
+  <% end %>
+  <br>
+  <!-- Title -->
+  <li id="title">
+    Title: <%= post.title %> </li>
+  <br>
+  <!-- Content -->
+  <li id="content">
+    Content: <%= post.content %> </li>
+  <br>
+  <li>
+  <br>
+  <%= link_to "View/Edit Comments!", post_path(post)%>
+  </b>
+  <hr>
+  <% end %>
 </ul>
